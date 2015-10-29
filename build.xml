@@ -17,7 +17,7 @@
 
 		<manifest>
 			<attribute name = "Main-Class" value =
-			"g53sqm.jibble.WebServerMain"/>
+			"WebServerMain"/>
 		</manifest>
 	</jar>
 	</target>
