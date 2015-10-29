@@ -1,3 +1,4 @@
+package g53sqm.jibble;
 /* 
 Copyright Paul James Mutton, 2001-2004, http://www.jibble.org/
 
@@ -182,7 +183,7 @@ public class RequestThread implements Runnable {
             reader = new BufferedInputStream(new FileInputStream(file));
             
             Logger.log(ip, request, 200);
-            String contentType = (String)WebServerConfig.MIME_TYPES.get(extension);
+            String contentType = WebServerConfig.MIME_TYPES.get(extension);
             if (contentType == null) {
                 contentType = "application/octet-stream";
             }
