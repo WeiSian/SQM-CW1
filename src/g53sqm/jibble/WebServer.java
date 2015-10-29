@@ -47,6 +47,9 @@ public class WebServer {
         ServerSocket serverSocket = null;
         try {
             serverSocket = new ServerSocket(_port);
+            System.out.println("Jibble web server (modified by Yong Wei Sian 011031 for G53SQM)");
+            System.out.println("Root Directory:" +_rootDir);
+            System.out.println("Port:" + _port);
         }
         catch (Exception e) {
             throw new WebServerException("Cannot start the web server on port " + _port + ".");
