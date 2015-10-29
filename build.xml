@@ -1,28 +1,28 @@
-<project name = "hello">
+<project name = "Jibble">
 
 	<target name = "clean">
-		<delete dir = "build" />
-		<mkdir dir = "build/classes"/>
+		<delete dir = "SQM-CW1/build" />
+		<mkdir dir = "SQM-CW1/build/classes"/>
 	</target>
 	
 	<target name = "compile" depends = "clean">
 		<javac srcdir = "src"
-			destdir = "build/classes"
+			destdir = "SQM-CW1/build/classes"
 			includeantruntime = "false" />
 	</target>
 
 <target name = "jar" depends = "compile">
-	<jar destfile = "build/jar/Hello.jar"
-		basedir = "build/classes">
+	<jar destfile = "SQM-CW1/build/jar/Jibble.jar"
+		basedir = "SQM-CW1/build/classes">
 
 		<manifest>
 			<attribute name = "Main-Class" value =
-			"wsdemo.Hello"/>
+			"g53sqm.jibble.WebServerMain"/>
 		</manifest>
 	</jar>
 	</target>
 	<target name = "run" depends = "jar">
-		<java jar = "build/jar/Hello.jar" fork = "true" />
+		<java jar = "SQM-CW1/build/jar/Jibble.jar" fork = "true" />
 	</target>
 
 </project>
